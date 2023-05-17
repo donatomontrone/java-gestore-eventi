@@ -70,7 +70,7 @@ public class Evento {
 	
 	public int prenota(int posti) throws Exception {
 		pastDate();
-		if (getPostiPrenotati() > getPostiTotali()) {
+		if (getPostiPrenotati() + posti > getPostiTotali()) {
 			throw new Exception("Numero di posti prenotabili raggiunto");
 		}
 		
